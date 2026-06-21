@@ -8,14 +8,57 @@ import gsap from "gsap";
 //   ease:"power2.inout",
 // });
 
-gsap.from("h1 span", {
-  yPercent: 120,
-  opacity: 0,
-  duration: 1.2,
-  ease: "power4.out",
-  stagger: {
-    each: 0.04,
-    from:"random"
-  },
+// gsap.from("h1 span", {
+//   yPercent: 120,
+//   opacity: 0,
+//   duration: 1.2,
+//   ease: "power4.out",
+//   stagger: {
+//     each: 0.04,
+//     from:"random"
+//   },
+// pause
+const play = document.querySelector(".play");
+const pause = document.querySelector(".pause");
+const restart = document.querySelector(".restart");
+const reverse = document.querySelector(".reverse");
+
+const t1 = gsap.timeline({ paused: true });
+
+t1.to(".box", {
+  x: 600,
+  duration: 1.3,
+  delay: 0.6,
+})
+.to(".box1", {
+  x: 600,
+  duration: 1.3,
+})
+.to(".box2", {
+  x: 600,
+  duration: 1.3,
+})
+.to(".box3", {
+  x: 600,
+  duration: 1.3,
+})
+.to(".box4", {
+  x: 600,
+  duration: 1.3,
 });
 
+play.addEventListener("click", () => {
+  t1.play();
+});
+
+pause.addEventListener("click", () => {
+  t1.pause();
+});
+
+restart.addEventListener("click", () => {
+  t1.restart();
+});
+
+reverse.addEventListener("click", () => {
+  t1.reverse();
+});
