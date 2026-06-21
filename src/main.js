@@ -1,3 +1,4 @@
+import { LucideBadgeEuro } from "lucide-react";
 import "./style.css";
 import gsap from "gsap";
 
@@ -22,6 +23,7 @@ const play = document.querySelector(".play");
 const pause = document.querySelector(".pause");
 const restart = document.querySelector(".restart");
 const reverse = document.querySelector(".reverse");
+const seek = document.querySelector(".seek");
 
 const t1 = gsap.timeline({ paused: true });
 
@@ -41,7 +43,7 @@ t1.to(".box", {
 .to(".box3", {
   x: 600,
   duration: 1.3,
-})
+}).addLabel("harsh")
 .to(".box4", {
   x: 600,
   duration: 1.3,
@@ -62,3 +64,6 @@ restart.addEventListener("click", () => {
 reverse.addEventListener("click", () => {
   t1.reverse();
 });
+seek.addEventListener("click",()=>{
+  t1.seek("harsh");
+})
