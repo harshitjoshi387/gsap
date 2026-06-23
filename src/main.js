@@ -73,16 +73,19 @@ import gsap from "gsap";
 
 
 // gsap.registerPlugin(ScrollTrigger);
+gsap.set(".imageDiv",{
+  scale:0.3,
+})
 
-gsap.to(".blue",{
-    x:500,
-    rotation:360,
-    duration:2,
+gsap.to(".imageDiv",{
+    scale:1,
+    ease:"power4.out",
+    
     scrollTrigger:{
-        trigger:".blue",
-        start:"top 80%",
-        end:"top 30%",
+        trigger:".page2",
+        start:"top top",
+        end:"top -100%",
         scrub:true,
-        markers:true
+       pin:true,
     }
 })
