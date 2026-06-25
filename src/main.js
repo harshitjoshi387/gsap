@@ -1,7 +1,8 @@
 import { LucideBadgeEuro } from "lucide-react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger,SplitText);
 import "./style.css";
 import gsap from "gsap";
 
@@ -73,19 +74,19 @@ import gsap from "gsap";
 
 
 // gsap.registerPlugin(ScrollTrigger);
-gsap.set(".imageDiv",{
-  scale:0.3,
-})
+// gsap.set(".imageDiv",{
+//   scale:0.3,
+// })
 
-gsap.to(".imageDiv",{
-    scale:1,
-    ease:"power4.out",
+// gsap.to(".imageDiv",{
+//     scale:1,
+//     ease:"power4.out",
     
-    scrollTrigger:{
-        trigger:".page2",
-        start:"top top",
-        end:"top -100%",
-        scrub:true,
-       pin:true,
-    }
-})
+//     scrollTrigger:{
+//         trigger:".page2",
+//         start:"top top",
+//         end:"top -100%",
+//         scrub:true,
+//        pin:true,
+//     }
+// })
