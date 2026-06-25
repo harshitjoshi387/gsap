@@ -91,30 +91,30 @@ gsap.registerPlugin(ScrollTrigger,SplitText);
 //        pin:true,
 //     }
 // })
-// const split = new SplitText('.title h1',{
-//     type:'lines'
-// })
-// const split1 = new SplitText('.title p',{
-//     type:'lines'
-// })
+const split = new SplitText('.title h1',{
+    type:'lines'
+})
+const split1 = new SplitText('.title p',{
+    type:'lines'
+})
 
-// gsap.from(split.lines,{
-//     yPercent:50,
-//     opacity:0,
-//     duration:2.2,
-//     ease:'expo.out',
-//     stagger:{
-//         each:0.09,
-//         from:"start"
-//     }
-// })
-// gsap.from(split1.lines,{
-//     yPercent:100,
-//     opacity:0,
-//     duration:2.2,
-//     ease:'expo.out',
-//     stagger:{
-//         each:0.09,
-//         from:"start"
-//     }
-// })
+gsap.from(split.lines,{
+    yPercent:50,
+    opacity:0,
+    duration:2.2,
+    ease:'expo.out',
+    stagger:{
+        each:0.09,
+        from:"start"
+    }
+})
+gsap.from(split1.lines,{
+    yPercent:100,
+    opacity:0,
+    duration:2.2,
+    ease:'expo.out',
+    stagger:{
+        each:0.09,
+        from:"end"
+    }
+})
